@@ -1,0 +1,8 @@
+Name: shop-api
+Host: 0.0.0.0
+Port: 8888
+MySql:
+  Dsn: hl:123456@tcp(121.199.46.42:3306)/shop?charset=utf8&parseTime=True&loc=Local
+#parking:wd@parking@tcp(link:zjweidu:com:3326)/parking_cloud?charset=utf8&parseTime=True&loc=Local
+ElasticSearch:
+  Address: http://localhost:9200
