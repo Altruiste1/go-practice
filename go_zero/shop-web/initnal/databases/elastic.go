@@ -1,14 +1,15 @@
-package global
+package databases
 
 import (
 	"fmt"
 	elasticsearch8 "github.com/elastic/go-elasticsearch/v8"
+	"go-practice/go_zero/shop/initnal/global"
 )
 
 func initElasticSearch() {
 	cfg := elasticsearch8.Config{
 		Addresses: []string{
-			Cfg.ElasticSearch.Address,
+			global.Cfg.ElasticSearch.Address,
 		},
 	}
 

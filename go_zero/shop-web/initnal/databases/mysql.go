@@ -1,6 +1,7 @@
-package global
+package databases
 
 import (
+	"go-practice/go_zero/shop/initnal/global"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -11,7 +12,7 @@ import (
 )
 
 func initMysql() {
-	dsn := Cfg.Mysql.Dsn
+	dsn := global.Cfg.Mysql.Dsn
 	newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer
 		logger.Config{
@@ -23,7 +24,7 @@ func initMysql() {
 
 	// 全局模式
 	var err error
-	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
+	MysqlDefaultDB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: true,
 		},

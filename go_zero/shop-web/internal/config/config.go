@@ -6,6 +6,7 @@ type Config struct {
 	rest.RestConf
 	Mysql         MySqlConfig
 	ElasticSearch ElasticConfig
+	GrpcClient    string
 }
 
 type MySqlConfig struct {

@@ -31,11 +31,11 @@ func searchDocument(client *elasticsearch8.TypedClient) {
 func searchDocument2(client *elasticsearch8.TypedClient) {
 	// 搜索content中包含好评的文档
 	resp, err := client.Search().
-		Index("my-review-1").
+		Index("spu").
 		Query(&types.Query{
 
 			MatchPhrase: map[string]types.MatchPhraseQuery{
-				"score": {Query: "5"},
+				"spu": {Query: "农夫"},
 			},
 		}).
 		Do(context.Background())
@@ -49,3 +49,5 @@ func searchDocument2(client *elasticsearch8.TypedClient) {
 		fmt.Printf("%s\n", hit.Source_)
 	}
 }
+
+// 多字段查询

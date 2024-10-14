@@ -6,3 +6,4 @@ MySql:
 #parking:wd@parking@tcp(link:zjweidu:com:3326)/parking_cloud?charset=utf8&parseTime=True&loc=Local
 ElasticSearch:
   Address: http://localhost:9200
+GrpcClient: 127.0.0.1:8080

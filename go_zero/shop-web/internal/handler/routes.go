@@ -22,6 +22,21 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/updateSpu",
 				Handler: UpdateSpuHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/createSpu",
+				Handler: CreateSpuHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/deleteSpu",
+				Handler: DeleteSpuHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/searchSpu",
+				Handler: SearchSpuHandler(serverCtx),
+			},
 		},
 	)
 }

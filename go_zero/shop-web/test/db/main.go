@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/elastic/go-elasticsearch/v8/esapi"
 	"github.com/zeromicro/go-zero/rest"
+	"go-practice/go_zero/shop/initnal/databases"
 	"go-practice/go_zero/shop/initnal/global"
 	"go-practice/go_zero/shop/internal/config"
 	"go-practice/go_zero/shop/model"
@@ -24,7 +25,7 @@ func init() {
 			Address: "http://localhost:9200",
 		},
 	}
-	global.InitGlobal()
+	databases.InitDatabases()
 }
 
 func main() {
@@ -40,7 +41,7 @@ func Bulk(body string, indexName string) error {
 		Index: "spu",
 		Body:  strings.NewReader(body),
 	}
-	res, err := req.Do(context.Background(), global.EsClient)
+	res, err := req.Do(context.Background(), databases.EsClient)
 	if err != nil {
 		return err
 	}
@@ -52,7 +53,7 @@ func Bulk(body string, indexName string) error {
 
 func getTestSpuData() []*esModel.Spu {
 	spus := make([]*model.Spu, 0)
-	global.DB.Model(model.Spu{}).Find(&spus)
+	databases.MysqlDefaultDB.Model(model.Spu{}).Find(&spus)
 	esSpu := make([]*esModel.Spu, 0)
 	for _, v := range spus {
 		esSpu = append(esSpu, &esModel.Spu{
