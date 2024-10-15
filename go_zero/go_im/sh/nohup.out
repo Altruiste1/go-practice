@@ -1,0 +1,49 @@
+WARNING: Package "github.com/golang/protobuf/protoc-gen-go/generator" is deprecated.
+	A future release of golang/protobuf will delete this package,
+	which has long been excluded from the compatibility promise.
+
+[WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2024-10-15 11:01:04.896208 W | embed: Running http and grpc server on single port. This is not recommended for production.
+2024-10-15 11:01:04.896341 I | etcdmain: etcd Version: 3.4.34
+2024-10-15 11:01:04.896356 I | etcdmain: Git SHA: c123b3ea3
+2024-10-15 11:01:04.896367 I | etcdmain: Go Version: go1.22.7
+2024-10-15 11:01:04.896376 I | etcdmain: Go OS/Arch: darwin/amd64
+2024-10-15 11:01:04.896384 I | etcdmain: setting maximum number of CPUs to 8, total number of available CPUs is 8
+2024-10-15 11:01:04.896395 N | etcdmain: failed to detect default host (default host not supported on darwin_amd64)
+2024-10-15 11:01:04.896402 W | etcdmain: no data-dir provided, using default data-dir ./default.etcd
+[WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2024-10-15 11:01:04.896611 W | embed: Running http and grpc server on single port. This is not recommended for production.
+2024-10-15 11:01:04.901206 I | embed: name = default
+2024-10-15 11:01:04.901237 I | embed: data dir = default.etcd
+2024-10-15 11:01:04.901265 I | embed: member dir = default.etcd/member
+2024-10-15 11:01:04.901284 I | embed: heartbeat = 100ms
+2024-10-15 11:01:04.901293 I | embed: election = 1000ms
+2024-10-15 11:01:04.901300 I | embed: snapshot count = 100000
+2024-10-15 11:01:04.901472 I | embed: advertise client URLs = http://localhost:2379
+2024-10-15 11:01:04.990472 I | etcdserver: starting member 8e9e05c52164694d in cluster cdf818194e3a8c32
+raft2024/10/15 11:01:04 INFO: 8e9e05c52164694d switched to configuration voters=()
+raft2024/10/15 11:01:04 INFO: 8e9e05c52164694d became follower at term 0
+raft2024/10/15 11:01:04 INFO: newRaft 8e9e05c52164694d [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+raft2024/10/15 11:01:04 INFO: 8e9e05c52164694d became follower at term 1
+raft2024/10/15 11:01:04 INFO: 8e9e05c52164694d switched to configuration voters=(10276657743932975437)
+2024-10-15 11:01:05.012745 W | auth: simple token is not cryptographically signed
+2024-10-15 11:01:05.052201 I | etcdserver: starting server... [version: 3.4.34, cluster version: to_be_decided]
+2024-10-15 11:01:05.052276 I | etcdserver: 8e9e05c52164694d as single-node; fast-forwarding 9 ticks (election ticks 10)
+2024-10-15 11:01:05.052309 I | pkg/fileutil: started to purge file, dir: default.etcd/member/snap, suffix: snap.db, max: 5, interval: 30s
+2024-10-15 11:01:05.053928 I | pkg/fileutil: started to purge file, dir: default.etcd/member/snap, suffix: snap, max: 5, interval: 30s
+2024-10-15 11:01:05.057063 E | etcdserver: cannot monitor file descriptor usage (cannot get FDUsage on darwin)
+2024-10-15 11:01:05.057098 I | pkg/fileutil: started to purge file, dir: default.etcd/member/wal, suffix: wal, max: 5, interval: 30s
+raft2024/10/15 11:01:05 INFO: 8e9e05c52164694d switched to configuration voters=(10276657743932975437)
+2024-10-15 11:01:05.062896 I | etcdserver/membership: added member 8e9e05c52164694d [http://localhost:2380] to cluster cdf818194e3a8c32
+2024-10-15 11:01:05.063573 I | embed: listening for peers on 127.0.0.1:2380
+raft2024/10/15 11:01:05 INFO: 8e9e05c52164694d is starting a new election at term 1
+raft2024/10/15 11:01:05 INFO: 8e9e05c52164694d became candidate at term 2
+raft2024/10/15 11:01:05 INFO: 8e9e05c52164694d received MsgVoteResp from 8e9e05c52164694d at term 2
+raft2024/10/15 11:01:05 INFO: 8e9e05c52164694d became leader at term 2
+raft2024/10/15 11:01:05 INFO: raft.node: 8e9e05c52164694d elected leader 8e9e05c52164694d at term 2
+2024-10-15 11:01:05.500796 I | etcdserver: setting up the initial cluster version to 3.4
+2024-10-15 11:01:05.506530 I | etcdserver: published {Name:default ClientURLs:[http://localhost:2379]} to cluster cdf818194e3a8c32
+2024-10-15 11:01:05.508830 I | embed: ready to serve client requests
+2024-10-15 11:01:05.511346 N | etcdserver/membership: set the initial cluster version to 3.4
+2024-10-15 11:01:05.511437 I | etcdserver/api: enabled capabilities for version 3.4
+2024-10-15 11:01:05.516611 N | embed: serving insecure client requests on 127.0.0.1:2379, this is strongly discouraged!

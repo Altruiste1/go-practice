@@ -1,0 +1,22 @@
+syntax = "v1"
+info(
+	title : "用户服务api"
+	desc : "用户服务api"
+)
+
+type (
+	UserReq {
+		Id int32 `json:"id"`
+	}
+
+	UserResp {
+		Id   int32  `json:"id"`
+		Name string `json:"name"`
+	}
+)
+service User {
+	
+	@handler user
+	get /users/id/:userId (UserReq) returns (UserResp)
+
+}
