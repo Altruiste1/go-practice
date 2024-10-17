@@ -26,6 +26,10 @@ func NewUserLogic(ctx context.Context, svcCtx *svc.ServiceContext) *UserLogic {
 
 func (l *UserLogic) User(req *types.UserReq) (resp *types.UserResp, err error) {
 	// todo: add your logic here and delete this line
+	return &types.UserResp{
+		Id:   1,
+		Name: "1",
+	}, nil
 	userResp, err := l.svcCtx.User.GetUser(l.ctx, &userclient.GetUserRequest{
 		Id:   req.Id,
 		Name: "",

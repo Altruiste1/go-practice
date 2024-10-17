@@ -11,6 +11,8 @@ func NewLoginVerificationMiddleware() *LoginVerificationMiddleware {
 
 func (m *LoginVerificationMiddleware) Handle(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		next(w, r)
+		return
 		// TODO generate middleware implement function, delete after code implementation
 		if r.Header.Get("token") != "" { // todo add jwt
 			next(w, r)

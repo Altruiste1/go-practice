@@ -1,6 +1,8 @@
 module go-practice/db/es
 
-go 1.20
+go 1.21
+
+toolchain go1.21.12
 
 require github.com/elastic/go-elasticsearch/v8 v8.14.0
 
