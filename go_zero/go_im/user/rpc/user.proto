@@ -13,7 +13,7 @@ message Response {
 
 service User {
   rpc Ping(Request) returns(Response);
-  rpc Register(Request)returns(Response);
+  rpc Register(RegisterRequest)returns(Response);
   rpc GetUser(GetUserRequest)returns(GetUserResponse);
   rpc Info(GetUserRequest)returns(GetUserResponse);
 }
@@ -27,4 +27,16 @@ message GetUserResponse{
   int32 Id = 1;
   string Name = 2;
   string Address = 3;
+}
+
+message RegisterRequest{
+  string Name = 1;
+  string Mobile = 2;
+  string Address = 3;
+}
+message RegisterResponse{
+  int32 Id = 1;
+  string Name = 2;
+  string Mobile = 3;
+  string Address = 4;
 }

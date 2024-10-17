@@ -47,3 +47,59 @@ raft2024/10/15 11:01:05 INFO: raft.node: 8e9e05c52164694d elected leader 8e9e05c
 2024-10-15 11:01:05.511346 N | etcdserver/membership: set the initial cluster version to 3.4
 2024-10-15 11:01:05.511437 I | etcdserver/api: enabled capabilities for version 3.4
 2024-10-15 11:01:05.516611 N | embed: serving insecure client requests on 127.0.0.1:2379, this is strongly discouraged!
+2024-10-15 17:50:17.897885 N | pkg/osutil: received terminated signal, shutting down...
+2024-10-15 17:50:17.898756 W | embed: stopping insecure grpc server due to error: accept tcp 127.0.0.1:2379: use of closed network connection
+2024-10-15 17:50:17.898846 W | embed: stopped insecure grpc server due to error: accept tcp 127.0.0.1:2379: use of closed network connection
+2024-10-15 17:50:17.899607 I | etcdserver: skipped leadership transfer for single voting member cluster
+WARNING: Package "github.com/golang/protobuf/protoc-gen-go/generator" is deprecated.
+	A future release of golang/protobuf will delete this package,
+	which has long been excluded from the compatibility promise.
+
+[WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2024-10-16 11:46:17.906935 W | embed: Running http and grpc server on single port. This is not recommended for production.
+2024-10-16 11:46:17.907052 I | etcdmain: etcd Version: 3.4.34
+2024-10-16 11:46:17.907061 I | etcdmain: Git SHA: c123b3ea3
+2024-10-16 11:46:17.907067 I | etcdmain: Go Version: go1.22.7
+2024-10-16 11:46:17.907073 I | etcdmain: Go OS/Arch: darwin/amd64
+2024-10-16 11:46:17.907080 I | etcdmain: setting maximum number of CPUs to 8, total number of available CPUs is 8
+2024-10-16 11:46:17.907089 N | etcdmain: failed to detect default host (default host not supported on darwin_amd64)
+2024-10-16 11:46:17.907096 W | etcdmain: no data-dir provided, using default data-dir ./default.etcd
+2024-10-16 11:46:17.907176 N | etcdmain: the server is already initialized as member before, starting as etcd member...
+[WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2024-10-16 11:46:17.907199 W | embed: Running http and grpc server on single port. This is not recommended for production.
+2024-10-16 11:46:17.910063 I | embed: name = default
+2024-10-16 11:46:17.910083 I | embed: data dir = default.etcd
+2024-10-16 11:46:17.910091 I | embed: member dir = default.etcd/member
+2024-10-16 11:46:17.910098 I | embed: heartbeat = 100ms
+2024-10-16 11:46:17.910104 I | embed: election = 1000ms
+2024-10-16 11:46:17.910110 I | embed: snapshot count = 100000
+2024-10-16 11:46:17.910122 I | embed: advertise client URLs = http://localhost:2379
+2024-10-16 11:46:17.910130 I | embed: initial advertise peer URLs = http://localhost:2380
+2024-10-16 11:46:17.910137 I | embed: initial cluster = 
+2024-10-16 11:46:17.924558 I | etcdserver: restarting member 8e9e05c52164694d in cluster cdf818194e3a8c32 at commit index 9
+raft2024/10/16 11:46:17 INFO: 8e9e05c52164694d switched to configuration voters=()
+raft2024/10/16 11:46:17 INFO: 8e9e05c52164694d became follower at term 2
+raft2024/10/16 11:46:17 INFO: newRaft 8e9e05c52164694d [peers: [], term: 2, commit: 9, applied: 0, lastindex: 9, lastterm: 2]
+2024-10-16 11:46:17.940195 W | auth: simple token is not cryptographically signed
+2024-10-16 11:46:17.979548 I | etcdserver: starting server... [version: 3.4.34, cluster version: to_be_decided]
+2024-10-16 11:46:17.979654 I | pkg/fileutil: started to purge file, dir: default.etcd/member/snap, suffix: snap.db, max: 5, interval: 30s
+2024-10-16 11:46:17.979698 I | pkg/fileutil: started to purge file, dir: default.etcd/member/snap, suffix: snap, max: 5, interval: 30s
+2024-10-16 11:46:17.979709 I | pkg/fileutil: started to purge file, dir: default.etcd/member/wal, suffix: wal, max: 5, interval: 30s
+2024-10-16 11:46:17.979739 E | etcdserver: cannot monitor file descriptor usage (cannot get FDUsage on darwin)
+raft2024/10/16 11:46:17 INFO: 8e9e05c52164694d switched to configuration voters=(10276657743932975437)
+2024-10-16 11:46:17.980153 I | etcdserver/membership: added member 8e9e05c52164694d [http://localhost:2380] to cluster cdf818194e3a8c32
+2024-10-16 11:46:17.980320 N | etcdserver/membership: set the initial cluster version to 3.4
+2024-10-16 11:46:17.980388 I | etcdserver/api: enabled capabilities for version 3.4
+2024-10-16 11:46:17.981192 I | embed: listening for peers on 127.0.0.1:2380
+raft2024/10/16 11:46:19 INFO: 8e9e05c52164694d is starting a new election at term 2
+raft2024/10/16 11:46:19 INFO: 8e9e05c52164694d became candidate at term 3
+raft2024/10/16 11:46:19 INFO: 8e9e05c52164694d received MsgVoteResp from 8e9e05c52164694d at term 3
+raft2024/10/16 11:46:19 INFO: 8e9e05c52164694d became leader at term 3
+raft2024/10/16 11:46:19 INFO: raft.node: 8e9e05c52164694d elected leader 8e9e05c52164694d at term 3
+2024-10-16 11:46:19.633164 I | etcdserver: published {Name:default ClientURLs:[http://localhost:2379]} to cluster cdf818194e3a8c32
+2024-10-16 11:46:19.633206 I | embed: ready to serve client requests
+2024-10-16 11:46:19.634185 N | embed: serving insecure client requests on 127.0.0.1:2379, this is strongly discouraged!
+2024-10-16 17:58:42.847137 N | pkg/osutil: received terminated signal, shutting down...
+2024-10-16 17:58:42.853698 W | embed: stopping insecure grpc server due to error: accept tcp 127.0.0.1:2379: use of closed network connection
+2024-10-16 17:58:42.853814 W | embed: stopped insecure grpc server due to error: accept tcp 127.0.0.1:2379: use of closed network connection
+2024-10-16 17:58:42.854450 I | etcdserver: skipped leadership transfer for single voting member cluster

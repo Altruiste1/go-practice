@@ -8,4 +8,9 @@ import (
 type Config struct {
 	rest.RestConf
 	UserRpc zrpc.RpcClientConf
+	Mysql   MysqlConf
+}
+
+type MysqlConf struct {
+	Dsn string
 }

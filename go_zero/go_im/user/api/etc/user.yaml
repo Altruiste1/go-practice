@@ -2,6 +2,12 @@ Name: User
 Host: 0.0.0.0
 Port: 8888
 UserRpc:
-  Hosts:
-    - 127.0.0.1:2379
-  Key: user.rpc
+  ListenOn: 0.0.0.0:8080
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: user.rpc
+Mysql:
+  Dsn: root:mysql@tech.com@tcp(121.199.46.42:3306)/go_zero_im?charset=utf8&parseTime=True&loc=Local
+
+

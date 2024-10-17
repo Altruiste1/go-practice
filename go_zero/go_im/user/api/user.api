@@ -18,5 +18,13 @@ service User {
 	
 	@handler user
 	get /users/id/:userId (UserReq) returns (UserResp)
+	
+}
 
+@server (
+	middleware: LoginVerification
+)
+service User{
+	@handler handlerName
+	get /userInfo(UserReq) returns(UserResp)
 }
