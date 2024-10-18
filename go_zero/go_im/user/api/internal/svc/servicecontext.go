@@ -19,5 +19,4 @@ func NewServiceContext(c config.Config) *ServiceContext {
 		//User:              userclient.NewUser(zrpc.MustNewClient(c.UserRpc)),
 		LoginVerification: middleware.NewLoginVerificationMiddleware().Handle,
 	}
-
 }
